@@ -2,7 +2,8 @@ import os
 import pandas as pd
 import openai
 
-DATA_FILE = "sumo_since_1957.csv"
+DATA_FILE = os.path.join(os.path.dirname(__file__), "..", "data", "sumo_since_1957.csv")
+DATA_FILE = os.path.abspath(DATA_FILE)
 
 class SumoChat:
     """Wrapper for querying OpenAI's ChatGPT about sumo wrestlers."""
